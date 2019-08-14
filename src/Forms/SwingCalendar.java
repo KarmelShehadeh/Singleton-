@@ -31,7 +31,7 @@ public class SwingCalendar extends JFrame {
     public static SwingCalendar instance;
 
     // Todo: Refactor this constructor so the program will create only one copy of this object
- private SwingCalendar() { // Constructor
+ private SwingCalendar() { // make the Constructor private
 
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Swing Calendar");
@@ -78,11 +78,11 @@ public class SwingCalendar extends JFrame {
 
     }
 
-    public static SwingCalendar getInstance(){
-        if(instance==null)
+    public static SwingCalendar getInstance(){// create a method to check whether the instance is already created or not.
+        if(instance==null) // if the instance is note created
             instance=new SwingCalendar();
         instance.setVisible(true);
-        return instance;
+        return instance;// return the last or the new instance that created here
     }
 
 

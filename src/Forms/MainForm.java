@@ -54,7 +54,7 @@ public class MainForm extends JFrame {
      * Todo: This method logs the object HashCode in a text file, after refactoring the code; show warning message if the HashCode of Calender1 doesn't equal Calender2 HashCode
      */
     private void showNewCalender() {
-        SwingCalendar sc =  SwingCalendar.getInstance();
+        SwingCalendar sc =  SwingCalendar.getInstance();//use the getInstance() method instead the constructor
 
         Util.Logger.log("Object HC: " + sc.hashCode()); // Log Calender hash code
 
